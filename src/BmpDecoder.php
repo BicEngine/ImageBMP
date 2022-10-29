@@ -15,7 +15,7 @@ use Bic\Image\Bmp\Internal\Compression;
 use Bic\Image\Bmp\Internal\Type;
 use Bic\Image\DecoderInterface;
 use Bic\Image\Exception\FormatException;
-use Bic\Image\Format;
+use Bic\Image\PixelFormat;
 use Bic\Image\Image;
 use Bic\Image\ImageInterface;
 use Bic\Image\Reader;
@@ -58,8 +58,8 @@ final class BmpDecoder implements DecoderInterface
         $stream->seek($file->offset);
 
         $format = match ($info->bitCount) {
-            24 => Format::B8G8R8,
-            32 => Format::B8G8R8A8,
+            24 => PixelFormat::B8G8R8,
+            32 => PixelFormat::B8G8R8A8,
             default => throw BitMapBitDepthException::fromUnsupportedBits($info->bitCount, [24, 32]),
         };
 
