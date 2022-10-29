@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Bic\Image\BMP\Exception;
 
-class BitMapBitDepthException extends DdsException
+use Bic\Image\Exception\ImageException;
+
+class BitMapBitDepthException extends ImageException
 {
     /**
      * @param int $bits

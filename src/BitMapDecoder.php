@@ -8,7 +8,7 @@ use Bic\Binary\Endianness;
 use Bic\Binary\StreamInterface;
 use Bic\Binary\TypedStream;
 use Bic\Image\BMP\Exception\BitMapBitDepthException;
-use Bic\Image\BMP\Exception\DdsCompressionException;
+use Bic\Image\BMP\Exception\CompressionException;
 use Bic\Image\BMP\Metadata\BitMapFileHeader;
 use Bic\Image\BMP\Metadata\BitMapInfoHeader;
 use Bic\Image\BMP\Metadata\BitMapCompression;
@@ -39,7 +39,7 @@ final class BitMapDecoder implements DecoderInterface
      * @param StreamInterface $stream
      *
      * @return ImageInterface
-     * @throws DdsCompressionException
+     * @throws CompressionException
      * @throws FormatException
      * @throws \Throwable
      *
@@ -54,7 +54,7 @@ final class BitMapDecoder implements DecoderInterface
 
         // Only RGB images is supported
         if ($info->compression !== BitMapCompression::RGB) {
-            throw DdsCompressionException::fromUnsupportedCompression($info->compression);
+            throw CompressionException::fromUnsupportedCompression($info->compression);
         }
 
         // Move to offset

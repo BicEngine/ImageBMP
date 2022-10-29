@@ -5,8 +5,9 @@ declare(strict_types=1);
 namespace Bic\Image\BMP\Exception;
 
 use Bic\Image\BMP\Metadata\BitMapCompression;
+use Bic\Image\Exception\ImageException;
 
-class DdsCompressionException extends DdsException
+class CompressionException extends ImageException
 {
     /**
      * @param BitMapCompression $compression
