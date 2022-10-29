@@ -9,7 +9,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Bic\\Image\\Png\\": "src"
+            "Bic\\Image\\Bmp\\": "src"
         }
     },
     "require-dev": {
@@ -19,7 +19,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Bic\\Image\\Png\\Tests\\": "tests"
+            "Bic\\Image\\Bmp\\Tests\\": "tests"
         }
     },
     "extra": {
