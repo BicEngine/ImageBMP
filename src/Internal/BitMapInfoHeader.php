@@ -39,7 +39,7 @@ final class BitMapInfoHeader
      * @param positive-int $bitCount Specifies the number of bits per pixel (bpp). For uncompressed formats, this value
      *                               is the average number of bits per pixel. For compressed formats, this value is the
      *                               implied bit depth of the uncompressed image, after the image has been decoded.
-     * @param Compression $compression For compressed video and YUV formats, this member is a FOURCC code, specified as
+     * @param BitMapCompression $compression For compressed video and YUV formats, this member is a FOURCC code, specified as
      *                                 a DWORD in little-endian order. For example, YUYV video has the FOURCC 'VYUY' or
      *                                 0x56595559.
      *
@@ -75,7 +75,7 @@ final class BitMapInfoHeader
         public readonly int $height,
         public readonly int $planes,
         public readonly int $bitCount,
-        public readonly Compression $compression,
+        public readonly BitMapCompression $compression,
         public readonly int $sizeImage,
         public readonly int $xPelsPerMeter,
         public readonly int $yPelsPerMeter,

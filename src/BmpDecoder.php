@@ -11,8 +11,9 @@ use Bic\Image\Bmp\Exception\BitMapBitDepthException;
 use Bic\Image\Bmp\Exception\BitMapCompressionException;
 use Bic\Image\Bmp\Internal\BitMapFileHeader;
 use Bic\Image\Bmp\Internal\BitMapInfoHeader;
-use Bic\Image\Bmp\Internal\Compression;
-use Bic\Image\Bmp\Internal\Type;
+use Bic\Image\Bmp\Internal\BitMapCompression;
+use Bic\Image\Bmp\Internal\BitMapType;
+use Bic\Image\Compression;
 use Bic\Image\DecoderInterface;
 use Bic\Image\Exception\FormatException;
 use Bic\Image\PixelFormat;
@@ -50,7 +51,7 @@ final class BmpDecoder implements DecoderInterface
         $info = self::readInfoHeader($typed);
 
         // Only RGB images is supported
-        if ($info->compression !== Compression::RGB) {
+        if ($info->compression !== BitMapCompression::RGB) {
             throw BitMapCompressionException::fromUnsupportedCompression($info->compression);
         }
 
@@ -73,6 +74,11 @@ final class BmpDecoder implements DecoderInterface
                 height: $info->height,
                 bytes: $format->getBytesPerPixel(),
             ),
+            compression: Compression::NONE,
+            metadata: new BitMapMetadata(
+                file: $file,
+                info: $info,
+            ),
         );
     }
 
@@ -89,7 +95,7 @@ final class BmpDecoder implements DecoderInterface
             height: $stream->int32(),
             planes: $stream->uint16(),
             bitCount: $stream->uint16(),
-            compression: Compression::from($stream->uint32()),
+            compression: BitMapCompression::from($stream->uint32()),
             sizeImage: $stream->uint32(),
             xPelsPerMeter: $stream->int32(),
             yPelsPerMeter: $stream->int32(),
@@ -106,7 +112,7 @@ final class BmpDecoder implements DecoderInterface
     public static function readFileHeader(TypedStream $stream): BitMapFileHeader
     {
         return new BitMapFileHeader(
-            type: Type::BM,
+            type: BitMapType::BM,
             size: $stream->uint32(),
             reserved1: $stream->uint16(),
             reserved2: $stream->uint16(),

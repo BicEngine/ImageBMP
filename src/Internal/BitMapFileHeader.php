@@ -16,7 +16,7 @@ namespace Bic\Image\Bmp\Internal;
 final class BitMapFileHeader
 {
     /**
-     * @param Type $type The file type; must be BM.
+     * @param BitMapType $type The file type; must be BM.
      * @param positive-int|0 $size The size, in bytes, of the bitmap file.
      * @param positive-int|0 $reserved1 Reserved; must be zero.
      * @param positive-int|0 $reserved2 Reserved; must be zero.
@@ -24,7 +24,7 @@ final class BitMapFileHeader
      *                       the BITMAPFILEHEADER structure to the bitmap bits.
      */
     public function __construct(
-        public readonly Type $type,
+        public readonly BitMapType $type,
         public readonly int $size,
         public readonly int $reserved1,
         public readonly int $reserved2,

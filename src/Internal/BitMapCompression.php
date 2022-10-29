@@ -10,7 +10,7 @@ namespace Bic\Image\Bmp\Internal;
  * @internal This is an internal library enum, please do not use it in your code.
  * @psalm-internal Bic\Image\Bmp
  */
-enum Compression: int
+enum BitMapCompression: int
 {
     case RGB = 0x0000;
     case RLE8 = 0x0001;
