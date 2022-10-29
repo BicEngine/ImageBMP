@@ -42,6 +42,8 @@ final class BmpDecoder implements DecoderInterface
      * @throws DdsCompressionException
      * @throws FormatException
      * @throws \Throwable
+     *
+     * @psalm-suppress ArgumentTypeCoercion
      */
     private function read(StreamInterface $stream): ImageInterface
     {
@@ -86,6 +88,8 @@ final class BmpDecoder implements DecoderInterface
      * @param TypedStream $stream
      *
      * @return BitMapInfoHeader
+     *
+     * @psalm-suppress PossiblyInvalidArgument
      */
     public static function readInfoHeader(TypedStream $stream): BitMapInfoHeader
     {
@@ -108,6 +112,8 @@ final class BmpDecoder implements DecoderInterface
      * @param TypedStream $stream
      *
      * @return BitMapFileHeader
+     *
+     * @psalm-suppress PossiblyInvalidArgument
      */
     public static function readFileHeader(TypedStream $stream): BitMapFileHeader
     {

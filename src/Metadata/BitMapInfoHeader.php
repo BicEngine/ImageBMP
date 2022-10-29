@@ -52,19 +52,19 @@ final class BitMapInfoHeader
      * @param positive-int $bitCount Specifies the number of bits per pixel (bpp). For uncompressed formats, this value
      *                               is the average number of bits per pixel. For compressed formats, this value is the
      *                               implied bit depth of the uncompressed image, after the image has been decoded.
-     * @param BitMapCompression $compression For compressed video and YUV formats, this member is a FOURCC code, specified as
-     *                                 a DWORD in little-endian order. For example, YUYV video has the FOURCC 'VYUY' or
-     *                                 0x56595559.
+     * @param BitMapCompression $compression For compressed video and YUV formats, this member is a FOURCC code,
+     *                                       specified as a DWORD in little-endian order. For example, YUYV video has
+     *                                       the FOURCC 'VYUY' or 0x56595559.
      *
-     *                                  For uncompressed RGB formats, the following values are possible:
-     *                                  - 0x0000 (BI_RGB) - Uncompressed RGB.
-     *                                  - 0x0003 (BI_BITFIELDS) - Uncompressed RGB with color masks.
-     *                                    Valid for 16-bpp and 32-bpp bitmaps.
+     *                                       For uncompressed RGB formats, the following values are possible:
+     *                                       - 0x0000 (BI_RGB) - Uncompressed RGB.
+     *                                       - 0x0003 (BI_BITFIELDS) - Uncompressed RGB with color masks.
+     *                                         Valid for 16-bpp and 32-bpp bitmaps.
      *
-     *                                  For 16-bpp bitmaps, if biCompression equals BI_RGB, the format is always RGB555.
-     *                                  If {@see self::$compression} equals BI_BITFIELDS, the format is either RGB555 or
-     *                                  RGB565. Use the subtype GUID in the AM_MEDIA_TYPE structure to determine the
-     *                                  specific RGB type.
+     *                                       For 16-bpp bitmaps, if biCompression equals BI_RGB, the format is always
+     *                                       RGB555. If {@see self::$compression} equals BI_BITFIELDS, the format is
+     *                                       either RGB555 or RGB565. Use the subtype GUID in the AM_MEDIA_TYPE
+     *                                       structure to determine the specific RGB type.
      * @param positive-int $sizeImage Specifies the size, in bytes, of the image. This can be set to 0 for uncompressed
      *                                RGB bitmaps.
      * @param int $xPelsPerMeter Specifies the horizontal resolution, in pixels per meter, of the target device for the
