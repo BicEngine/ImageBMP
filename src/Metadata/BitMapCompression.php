@@ -2,13 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Bic\Image\Bmp\Internal;
+namespace Bic\Image\Bmp\Metadata;
 
 /**
  * @link https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-wmf/4e588f70-bd92-4a6f-b77f-35d0feaf7a57
- *
- * @internal This is an internal library enum, please do not use it in your code.
- * @psalm-internal Bic\Image\Bmp
  */
 enum BitMapCompression: int
 {
@@ -18,8 +15,7 @@ enum BitMapCompression: int
     case BITFIELDS = 0x0003;
     case JPEG = 0x0004;
     case PNG = 0x0005;
-
     case CMYK = 0x000B;
-    case CMYKRLE8 = 0x000C;
-    case CMYKRLE4 = 0x000D;
+    case CMYK_RLE8 = 0x000C;
+    case CMYK_RLE4 = 0x000D;
 }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Bic\Image\Bmp\Internal;
+namespace Bic\Image\Bmp\Metadata;
 
 /**
  * The BITMAPINFOHEADER structure contains information about the dimensions and
@@ -13,10 +13,23 @@ namespace Bic\Image\Bmp\Internal;
  * for GDI. If you are using this structure to describe video data, use the
  * information given here.
  *
- * @link https://learn.microsoft.com/en-us/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader
+ * <code>
+ *  typedef struct tagBITMAPINFOHEADER {
+ *      DWORD biSize;
+ *      LONG  biWidth;
+ *      LONG  biHeight;
+ *      WORD  biPlanes;
+ *      WORD  biBitCount;
+ *      DWORD biCompression;
+ *      DWORD biSizeImage;
+ *      LONG  biXPelsPerMeter;
+ *      LONG  biYPelsPerMeter;
+ *      DWORD biClrUsed;
+ *      DWORD biClrImportant;
+ *  } BITMAPINFOHEADER, *LPBITMAPINFOHEADER, *PBITMAPINFOHEADER;
+ * </code>
  *
- * @internal This is an internal library class, please do not use it in your code.
- * @psalm-internal Bic\Image\Bmp
+ * @link https://learn.microsoft.com/en-us/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader
  */
 final class BitMapInfoHeader
 {

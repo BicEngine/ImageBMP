@@ -2,16 +2,23 @@
 
 declare(strict_types=1);
 
-namespace Bic\Image\Bmp\Internal;
+namespace Bic\Image\Bmp\Metadata;
 
 /**
  * The BITMAPFILEHEADER structure contains information about the type, size,
  * and layout of a file that contains a DIB.
  *
- * @link https://learn.microsoft.com/en-us/windows/win32/api/wingdi/ns-wingdi-bitmapfileheader
+ * <code>
+ *  typedef struct tagBITMAPFILEHEADER {
+ *      WORD  bfType;
+ *      DWORD bfSize;
+ *      WORD  bfReserved1;
+ *      WORD  bfReserved2;
+ *      DWORD bfOffBits;
+ *  } BITMAPFILEHEADER, *LPBITMAPFILEHEADER, *PBITMAPFILEHEADER;
+ * </code>
  *
- * @internal This is an internal library class, please do not use it in your code.
- * @psalm-internal Bic\Image\Bmp
+ * @link https://learn.microsoft.com/en-us/windows/win32/api/wingdi/ns-wingdi-bitmapfileheader
  */
 final class BitMapFileHeader
 {
