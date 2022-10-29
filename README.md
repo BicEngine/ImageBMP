@@ -1,7 +1,7 @@
 # BMP Image Decoder
 
 <p align="center">
-    <a href="https://github.com/BicEngine/ImageBmp/actions"><img src="https://github.com/BicEngine/ImageBmp/workflows/build/badge.svg"></a>
+    <a href="https://github.com/BicEngine/ImageBMP/actions"><img src="https://github.com/BicEngine/ImageBMP/workflows/build/badge.svg"></a>
 </p>
 
 ## Requirements
