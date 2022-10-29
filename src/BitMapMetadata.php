@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Bic\Image\Bmp;
+namespace Bic\Image\BMP;
 
-use Bic\Image\Bmp\Metadata\BitMapFileHeader;
-use Bic\Image\Bmp\Metadata\BitMapInfoHeader;
+use Bic\Image\BMP\Metadata\BitMapFileHeader;
+use Bic\Image\BMP\Metadata\BitMapInfoHeader;
 
 final class BitMapMetadata
 {

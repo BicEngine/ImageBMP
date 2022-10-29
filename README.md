@@ -1,7 +1,7 @@
-# ICO Image Decoder
+# BMP Image Decoder
 
 <p align="center">
-    <a href="https://github.com/BicEngine/ImageIco/actions"><img src="https://github.com/BicEngine/ImageIco/workflows/build/badge.svg"></a>
+    <a href="https://github.com/BicEngine/ImageBmp/actions"><img src="https://github.com/BicEngine/ImageBmp/workflows/build/badge.svg"></a>
 </p>
 
 ## Requirements
@@ -13,7 +13,7 @@
 Library is available as composer repository and can be installed using the
 following command in a root of your project.
 
-- `composer require bic-engine/image-ico`
+- `composer require bic-engine/image-bmp`
 
 ## Usage
 

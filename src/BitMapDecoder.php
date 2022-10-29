@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Bic\Image\Bmp;
+namespace Bic\Image\BMP;
 
 use Bic\Binary\Endianness;
 use Bic\Binary\StreamInterface;
 use Bic\Binary\TypedStream;
-use Bic\Image\Bmp\Exception\BitMapBitDepthException;
-use Bic\Image\Bmp\Exception\DdsCompressionException;
-use Bic\Image\Bmp\Metadata\BitMapFileHeader;
-use Bic\Image\Bmp\Metadata\BitMapInfoHeader;
-use Bic\Image\Bmp\Metadata\BitMapCompression;
-use Bic\Image\Bmp\Metadata\BitMapType;
+use Bic\Image\BMP\Exception\BitMapBitDepthException;
+use Bic\Image\BMP\Exception\DdsCompressionException;
+use Bic\Image\BMP\Metadata\BitMapFileHeader;
+use Bic\Image\BMP\Metadata\BitMapInfoHeader;
+use Bic\Image\BMP\Metadata\BitMapCompression;
+use Bic\Image\BMP\Metadata\BitMapType;
 use Bic\Image\Compression;
 use Bic\Image\DecoderInterface;
 use Bic\Image\Exception\FormatException;
@@ -21,7 +21,7 @@ use Bic\Image\Image;
 use Bic\Image\ImageInterface;
 use Bic\Image\Reader;
 
-final class BmpDecoder implements DecoderInterface
+final class BitMapDecoder implements DecoderInterface
 {
     /**
      * {@inheritDoc}

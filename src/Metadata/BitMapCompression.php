@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Bic\Image\Bmp\Metadata;
+namespace Bic\Image\BMP\Metadata;
 
 /**
  * @link https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-wmf/4e588f70-bd92-4a6f-b77f-35d0feaf7a57

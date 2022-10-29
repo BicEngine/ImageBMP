@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Bic\Image\Bmp\Exception;
+namespace Bic\Image\BMP\Exception;
 
 class BitMapBitDepthException extends DdsException
 {

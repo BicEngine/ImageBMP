@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Bic\Image\Bmp\Metadata;
+namespace Bic\Image\BMP\Metadata;
 
 enum BitMapType
 {

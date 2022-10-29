@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Bic\Image\Bmp\Tests;
+namespace Bic\Image\BMP\Tests;
 
 use PHPUnit\Framework\TestCase as BaseTestCase;
 
